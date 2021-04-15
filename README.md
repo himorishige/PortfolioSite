@@ -17,9 +17,11 @@ AWS Amplify hosting / API（REST、GraphQL）、AWS SecretManager、SendGrid の
 ```
 SKIP_PREFLIGHT_CHECK=true // storybook用の記載
 REACT_APP_MAIL_API_URL=https://hogehoge/api // ContactForm用APIエンドポイント
+REACT_APP_MAIL_API_KEY=key // ContactForm用API Key
+REACT_APP_MAIL_API_TOKEN=hogehoge // ContactForm用Token
 ```
 
-Amplify 上では環境変数に追加する必要があります。
+Amplify 上で実行の際は環境変数に追加する必要があります。
 
 `aws-exports.js`
 
@@ -39,4 +41,4 @@ Portfolio 作品一覧を表示するには DynamoDB へのデータ投入が必
 
 ### `yarn storybook`
 
-Storybook 起動します。
+Storybook を起動します。
