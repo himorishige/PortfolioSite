@@ -24,6 +24,8 @@ const Contact: React.VFC = React.memo(() => {
 
   const onSubmit = (data: PostData) => {
     const url = process.env.REACT_APP_MAIL_API_URL || '';
+    const apiKey = process.env.REACT_APP_MAIL_API_KEY || '';
+    const apiToken = process.env.REACT_APP_MAIL_API_TOKEN || '';
 
     setLoading(true);
 
@@ -32,9 +34,10 @@ const Contact: React.VFC = React.memo(() => {
         const response = await fetch(url, {
           method: 'POST',
           headers: {
+            'x-api-key': apiKey,
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ ...data, key: 'himorishige' }),
+          body: JSON.stringify({ ...data, key: apiToken }),
         });
 
         if (!response.ok) {
