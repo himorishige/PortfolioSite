@@ -15,7 +15,7 @@
       "function": {
         "portfolioAPI": {
           "deploymentBucketName": "amplify-portfolio-main-92203-deployment",
-          "s3Key": "amplify-builds/portfolioAPI-4e5456306c377a385149-build.zip"
+          "s3Key": "amplify-builds/portfolioAPI-42317a7574735a306757-build.zip"
         }
       }
     }

@@ -8,11 +8,10 @@ See the License for the specific language governing permissions and limitations 
 const express = require('express');
 const bodyParser = require('body-parser');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
-
 const sgMail = require('@sendgrid/mail');
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'test@example.com';
-const FORM_KEY = process.env.FORM_KEY | '';
+const FORM_KEY = process.env.FORM_KEY || '';
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
 const h = require('./sanitize');
 
 // declare a new express app
@@ -26,6 +25,13 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Headers', '*');
   next();
 });
+
+// async wrapper
+const asyncWrapper = (fn) => {
+  return (req, res, next) => {
+    return fn(req, res, next).catch(next);
+  };
+};
 
 /**********************
  * Example get method *
@@ -50,75 +56,76 @@ app.post('/api', function (req, res) {
   res.json({ success: 'post call succeed!', url: req.url, body: req.body });
 });
 
-app.post('/api/sendmail', function (req, res) {
-  // Add your code here
-  // res.json({ success: 'post call succeed!', url: req.url, body: req.body });
+app.post(
+  '/api/sendmail',
+  asyncWrapper(async function (req, res, next) {
+    // Add your code here
 
-  const form = req.body;
+    const form = req.body;
 
-  if (form.name && form.email && form.key === FORM_KEY) {
-    sgMail.setApiKey(SENDGRID_API_KEY);
+    if (form.name && form.email && form.key === FORM_KEY) {
+      sgMail.setApiKey(SENDGRID_API_KEY);
+      const messages = [
+        {
+          to: form.email,
+          bcc: ADMIN_EMAIL,
+          from: `Hiroshi Morishige<${ADMIN_EMAIL}>`,
+          subject: '【himorishige.io】お問合せありがとうございました',
+          text: `${h(form.name)} 様
 
-    const messages = [
-      {
-        to: form.email,
-        bcc: ADMIN_EMAIL,
-        from: `Hiroshi Morishige<${ADMIN_EMAIL}>`,
-        subject: '【himorishige.io】お問合せありがとうございました',
-        text: `${h(form.name)} 様
+    お問合せいただきありがとうございました。
+    himorishige.io管理人の森茂と申します。
 
-お問合せいただきありがとうございました。
-himorishige.io管理人の森茂と申します。
+    内容を確認の上近日中にご連絡させていただきますので
+    今しばらくお待ちくださいませ。
 
-内容を確認の上近日中にご連絡させていただきますので
-今しばらくお待ちくださいませ。
+    お急ぎの場合は大変お手数ですが下記メールアドレスまでお知らせください。
 
-お急ぎの場合は大変お手数ですが下記メールアドレスまでお知らせください。
+    どうぞよろしくお願いいたします。
 
-どうぞよろしくお願いいたします。
+    【お問合せ内容】
+    ${h(form.message)}
 
-【お問合せ内容】
-${h(form.message)}
+    ---
+    Hiroshi Morishige
+    https://himorishige.io/
+    ${ADMIN_EMAIL}`,
+        },
+        {
+          to: ADMIN_EMAIL,
+          from: form.email,
+          subject: '【himorishige】お問合せ',
+          text: `${h(form.name)} 様よりお問合せがありました。
 
----
-Hiroshi Morishige
-https://himorishige.io/
-${ADMIN_EMAIL}`,
-      },
-      {
-        to: ADMIN_EMAIL,
-        from: form.email,
-        subject: '【himorishige】お問合せ',
-        text: `${h(form.name)} 様よりお問合せがありました。
+    【お名前】
+     ${h(form.name)}
 
-【お名前】
- ${h(form.name)}
+    【E-mail】
+     ${h(form.email)}
 
-【E-mail】
- ${h(form.email)}
+    【メッセージ】
+     ${h(form.message)}
+     `,
+        },
+      ];
 
-【メッセージ】
- ${h(form.message)}
- `,
-      },
-    ];
+      await sgMail.send(messages).then(
+        () => {
+          res.json({ success: 'send messages', url: req.url });
+        },
+        (error) => {
+          console.error(error);
 
-    sgMail.send(messages).then(
-      () => {
-        res.json({ success: 'send complete', url: req.url });
-      },
-      (error) => {
-        console.error(error);
-
-        if (error.response) {
-          console.error(error.response.body);
-        }
-      },
-    );
-  } else {
-    res.json({ success: 'post call succeed!', url: req.url, body: req.body });
-  }
-});
+          if (error.response) {
+            console.error(error.response.body);
+          }
+        },
+      );
+    } else {
+      res.json({ success: 'post call succeed!', url: req.url, body: req.body });
+    }
+  }),
+);
 
 /****************************
  * Example put method *
