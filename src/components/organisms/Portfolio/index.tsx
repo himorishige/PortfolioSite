@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from 'src/components/atoms';
+import { Heading, Typography } from 'src/components/atoms';
 import { WorkList } from 'src/components/organisms';
 import styles from './index.module.scss';
 import { Work } from 'src/types';
@@ -20,7 +20,13 @@ const Portfolio: React.VFC<Props> = (props) => {
         </Heading>
       </div>
       <div className={styles.workList}>
-        <WorkList works={works} handleClick={handleClick} />
+        {works.length ? (
+          <WorkList works={works} handleClick={handleClick} />
+        ) : (
+          <Typography primary align="center">
+            作品の登録がありません。
+          </Typography>
+        )}
       </div>
     </div>
   );
