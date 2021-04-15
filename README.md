@@ -1,10 +1,10 @@
 # ポートフォリオサイト
 
-このプロジェクトは、https://himorishige.io/ で公開されているポートフォリオサイトのソースコードになります。
+このプロジェクトは、https://himorishige.io/で公開されているポートフォリオサイトのソースコードになります。
 
 ## 動作に必要な外部サービス
 
-AWS Amplify hosting / API（REST、GraphQL）、AWS SecretManager、SendGrid の設定が必要となります。
+AWS Amplify hosting / API（REST、GraphQL）、AWS SecretManager、SendGridの設定が必要となります。
 
 ## 初期設定
 
@@ -12,21 +12,26 @@ AWS Amplify hosting / API（REST、GraphQL）、AWS SecretManager、SendGrid の
 
 ### フロントエンド
 
-`.env.local`
+`.env`
 
 ```
 SKIP_PREFLIGHT_CHECK=true // storybook用の記載
+```
+
+`.env.local`
+
+```
 REACT_APP_MAIL_API_URL=https://hogehoge/api // ContactForm用APIエンドポイント
 REACT_APP_MAIL_API_KEY=key // ContactForm用API Key
 REACT_APP_MAIL_API_TOKEN=hogehoge // ContactForm用Token
 ```
 
-Amplify 上で実行の際は環境変数に追加する必要があります。
+Amplify上で実行の際は環境変数に追加する必要があります。
 
 `aws-exports.js`
 
-Amplify サービスを利用するために必要となります。
-AmplifyCLI で、アプリケーションを`amplify init`して初期設定を行うか、`amplify pull`で既存アプリケーションを pull してださい。
+Amplifyサービスを利用するために必要となります。
+AmplifyCLIで、アプリケーションを`amplify init`して初期設定を行うか、`amplify pull`で既存アプリケーションをpullしてださい。
 
 ### バックエンド
 
@@ -37,8 +42,8 @@ AmplifyCLI で、アプリケーションを`amplify init`して初期設定を�
 ### `yarn start`
 
 開発モードでアプリケーションを起動します。  
-Portfolio 作品一覧を表示するには DynamoDB へのデータ投入が必要となります。
+Portfolio作品一覧を表示するにはDynamoDBへのデータ投入が必要となります。
 
 ### `yarn storybook`
 
-Storybook を起動します。
+Storybookを起動します。
