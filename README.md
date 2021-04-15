@@ -19,6 +19,8 @@ SKIP_PREFLIGHT_CHECK=true // storybook用の記載
 REACT_APP_MAIL_API_URL=https://hogehoge/api // ContactForm用APIエンドポイント
 ```
 
+Amplify 上では環境変数に追加する必要があります。
+
 `aws-exports.js`
 
 Amplify サービスを利用するために必要となります。
