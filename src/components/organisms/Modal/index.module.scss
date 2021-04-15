@@ -1,0 +1,121 @@
+@use 'src/styles/variables.scss' as *;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  animation: fadeIn 0.3s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include mq(sm) {
+    padding: 20px 1rem;
+  }
+}
+
+.wrapper {
+  max-width: 1080px;
+  height: 100%;
+  overflow: auto;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 80px 40px 0;
+  cursor: default;
+  @include mq(sm) {
+    padding: 40px 20px 0;
+  }
+}
+
+.heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.workImage {
+  max-width: 1000px;
+  height: 400px;
+  overflow: hidden;
+  @include mq(md) {
+    height: 256px;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    @include mq(sm) {
+      width: 100%;
+    }
+  }
+}
+
+.tagList {
+  margin-top: 40px;
+  @include mq(sm) {
+    margin-top: 20px;
+  }
+}
+
+.description {
+  margin-top: 40px;
+  @include mq(sm) {
+    margin-top: 20px;
+  }
+}
+
+.tableWrapper {
+  margin-top: 40px;
+  @include mq(sm) {
+    margin-top: 20px;
+  }
+}
+
+.dl {
+  display: flex;
+  flex-wrap: wrap;
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+.dt {
+  width: 20%;
+  margin-right: 2%;
+  padding: 4px 0;
+  border-bottom: 1px solid #c4c4c4;
+  @include mq(sm) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.dd {
+  width: calc(80% - 2%);
+  padding: 4px 0;
+  border-bottom: 1px solid #c4c4c4;
+  @include mq(sm) {
+    width: 100%;
+    border: none;
+  }
+}
+
+.closeButton {
+  margin: 80px auto;
+  text-align: center;
+  @include mq(sm) {
+    margin-top: 40px auto;
+  }
+}

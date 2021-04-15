@@ -1,0 +1,38 @@
+@use 'src/styles/variables.scss' as *;
+
+.typography {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100%;
+  white-space: pre-wrap;
+  &Primary {
+    color: var(--black-color);
+  }
+  &Secondary {
+    color: var(--white-color);
+  }
+}
+
+.small {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+.medium {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+.large {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}

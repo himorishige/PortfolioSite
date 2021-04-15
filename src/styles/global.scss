@@ -1,0 +1,23 @@
+@use 'src/styles/variables.scss' as *;
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #353535;
+  --primary-color: #192947;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 2;
+  letter-spacing: 0.05em;
+  background: #ffffff;
+  color: var(--black-color);
+}
+
+.fixed-body {
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px; /* 幅のリフローを避ける */
+  @include mq(md) {
+    padding-right: initial;
+  }
+}

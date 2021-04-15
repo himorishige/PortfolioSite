@@ -1,0 +1,30 @@
+@use 'src/styles/variables.scss' as *;
+@use 'src/styles/angled-edges.scss' as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  width: 100%;
+  background-color: var(--white-color);
+  @include mq(sm) {
+    height: 180px;
+    @include angle-edge(
+      $angle: 3,
+      $angle-position-y: 'both',
+      $angle-position-x: 'left',
+      $angle-position-bottom-x: 'right'
+    );
+  }
+  .skillImage {
+    zoom: 0.5;
+  }
+  /*Firefox用*/
+  @-moz-document url-prefix() {
+    .skillImage {
+      transform-origin: 0 0;
+      transform: scale(0.5) translate(50%, 50%);
+    }
+  }
+}

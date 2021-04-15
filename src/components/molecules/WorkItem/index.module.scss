@@ -1,0 +1,26 @@
+@use 'src/styles/variables.scss' as *;
+
+.wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  height: 360px;
+  padding: 1rem;
+  @include mq(sm) {
+    height: 240px;
+  }
+}
+
+.title {
+  margin-top: -2rem;
+}
+
+.viewButton {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,56 @@
+{
+  "Table-lfid5adfxbgdtodxwjlsvi2cw4-main": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "ce2f5606-435e-4e46-8cb6-bb32f44827d8" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "利用技術" },
+          "body": { "S": "XD, React, TypeScript, Storybook, sass, css-modules, React Hook Form" },
+          "sort": { "N": "1" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "df4daeb8-2446-495f-8114-06c1a90c895c" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "制作期間" },
+          "body": { "S": "２週間" },
+          "sort": { "N": "2" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "b38d49e2-dcad-4ce1-ae64-b5799ff9f116" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "公開URL" },
+          "body": { "S": "https://himorishige.io" },
+          "sort": { "N": "3" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "e3a07176-6ccb-495c-80b2-a1f351bb4490" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "Github" },
+          "body": { "S": "https://github.com/himorishige/afs-lesson1" },
+          "sort": { "N": "4" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    }
+  ]
+}

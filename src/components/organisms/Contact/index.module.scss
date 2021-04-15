@@ -1,0 +1,42 @@
+@use 'src/styles/variables.scss' as *;
+@use 'src/styles/angled-edges.scss' as *;
+
+.wrapper {
+  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+  // url('src/assets/images/hazard.jpg') center / cover no-repeat;
+  padding: 160px 0 40px;
+  @include mq(sm) {
+    padding: 80px 1rem 40px;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 80px;
+  @include mq(sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.typography {
+  max-width: 840px;
+  margin: 0 auto 40px;
+}
+
+.formArea {
+  max-width: 840px;
+  margin: 0 auto 80px;
+}
+
+.formControl {
+  margin-bottom: 40px;
+}
+
+.formSubmit {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.iconWrapper {
+  margin-bottom: 40px;
+}

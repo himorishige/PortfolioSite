@@ -1,0 +1,7 @@
+@use 'src/styles/variables.scss' as *;
+.bg {
+  color: var(--primary-color);
+  @include mq(md) {
+    color: var(--black-color);
+  }
+}

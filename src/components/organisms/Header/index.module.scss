@@ -1,0 +1,50 @@
+@use 'src/styles/variables.scss' as *;
+@use 'src/styles/angled-edges.scss' as *;
+
+.wrapper {
+  position: relative;
+}
+
+.kv {
+  background: var(--primary-color);
+  height: 400px;
+  @include mq(sm) {
+    height: 280px;
+  }
+  img {
+    object-fit: cover;
+    object-position: 80% 80%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.profile {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+}
+
+.i {
+  top: 0;
+}
+
+.snsIcons {
+  position: absolute;
+  top: 12px;
+  right: 0;
+}

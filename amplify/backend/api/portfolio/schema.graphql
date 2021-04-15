@@ -1,0 +1,26 @@
+type Tag @model @key(name: "byTag", fields: ["workId", "name"]) {
+  id: ID!
+  workId: ID!
+  name: String!
+  color: String
+  bgColor: String
+}
+
+type Table @model @key(name: "byTable", fields: ["workId", "sort"]) {
+  id: ID!
+  workId: ID!
+  name: String!
+  body: String!
+  sort: Int!
+}
+
+type Work @model @searchable {
+  id: ID!
+  title: String!
+  image: String!
+  body: String!
+  sort: Int
+  tag: [Tag] @connection(keyName: "byTag", fields: ["id"])
+  table: [Table] @connection(keyName: "byTable", fields: ["id"])
+  createdAt: AWSDateTime!
+}

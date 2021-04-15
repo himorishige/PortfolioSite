@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/api",
+            "lambdaFunction": "portfolioAPI",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/api"
+        }
+    ],
+    "resourceName": "portfolioAPI",
+    "apiName": "portfolioAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "portfolioAPI"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplify1ff54161dd674-staging-82547-authRole",
+        "unAuthRoleName": "amplify-amplify1ff54161dd674-staging-82547-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "portfolioAPI",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

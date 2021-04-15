@@ -1,0 +1,15 @@
+@use 'src/styles/variables.scss' as *;
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 120px;
+  @include mq(sm) {
+    padding: 40px 2rem;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}

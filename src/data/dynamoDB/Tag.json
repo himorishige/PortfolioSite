@@ -1,0 +1,69 @@
+{
+  "Tag-lfid5adfxbgdtodxwjlsvi2cw4-main": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "50233c25-eebd-4f3f-8b03-cf544f14d3ed" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "Design" },
+          "color": { "S": "" },
+          "bgColor": { "S": "" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "588b5c25-49f8-4fc2-a8aa-9f8e934b65be" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "React" },
+          "color": { "S": "" },
+          "bgColor": { "S": "#61dafb" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "a0540f6f-bfe1-4bb9-a6fb-84a7e36cb560" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "React Hook Form" },
+          "color": { "S": "" },
+          "bgColor": { "S": "#ec5990" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "7758889a-7b98-445f-badb-a70d153e9d33" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "Storybook" },
+          "color": { "S": "" },
+          "bgColor": { "S": "#fe4685" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "f39f54a8-83be-4f3b-9db5-c274c0639bbd" },
+          "workId": { "S": "3932ec7f-5334-4c46-8ead-adb52314a94e" },
+          "name": { "S": "TypeScript" },
+          "color": { "S": "" },
+          "bgColor": { "S": "#3077c6" },
+          "createdAt": { "S": "2021-04-12T12:59:28.951Z" },
+          "updatedAt": { "S": "2021-04-12T12:59:28.951Z" }
+        }
+      }
+    }
+  ]
+}

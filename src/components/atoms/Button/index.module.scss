@@ -1,0 +1,43 @@
+@use 'src/styles/variables.scss' as *;
+
+.button {
+  background-color: transparent;
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  word-wrap: break-word;
+  @include mq(sm) {
+    width: 240px;
+    height: auto;
+    padding: 10px 5px;
+  }
+  &Primary {
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+    &:hover {
+      background-color: var(--white-color);
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    &:disabled {
+      background-color: gray;
+      cursor: wait;
+    }
+  }
+  &Secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+    &:disabled {
+      background-color: gray;
+      cursor: wait;
+    }
+  }
+}

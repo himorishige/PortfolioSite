@@ -1,0 +1,13 @@
+.snsIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLink {
+  margin: 0 1rem;
+  transition: opacity 0.2s linear;
+  &:hover {
+    opacity: 0.7;
+  }
+}

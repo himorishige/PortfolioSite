@@ -1,0 +1,44 @@
+{
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-portfolio-main-92203-authRole",
+      "UnauthRoleArn": "arn:aws:iam::346607297530:role/amplify-portfolio-main-92203-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::346607297530:role/amplify-portfolio-main-92203-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-portfolio-main-92203-deployment",
+      "UnauthRoleName": "amplify-portfolio-main-92203-unauthRole",
+      "StackName": "amplify-portfolio-main-92203",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:346607297530:stack/amplify-portfolio-main-92203/b626b0f0-9c39-11eb-acb3-0ecca0918775",
+      "AmplifyAppId": "d1gickyer60r5w"
+    },
+    "categories": {
+      "function": {
+        "portfolioAPI": {
+          "deploymentBucketName": "amplify-portfolio-main-92203-deployment",
+          "s3Key": "amplify-builds/portfolioAPI-4e5456306c377a385149-build.zip"
+        }
+      }
+    }
+  },
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify1ff54161dd674-staging-82547-authRole",
+      "UnauthRoleArn": "arn:aws:iam::346607297530:role/amplify-amplify1ff54161dd674-staging-82547-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::346607297530:role/amplify-amplify1ff54161dd674-staging-82547-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-amplify1ff54161dd674-staging-82547-deployment",
+      "UnauthRoleName": "amplify-amplify1ff54161dd674-staging-82547-unauthRole",
+      "StackName": "amplify-amplify1ff54161dd674-staging-82547",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:346607297530:stack/amplify-amplify1ff54161dd674-staging-82547/aef359e0-9b68-11eb-bf6c-0e4c98b69ec3",
+      "AmplifyAppId": "d1gickyer60r5w"
+    },
+    "categories": {
+      "function": {
+        "portfolioAPI": {
+          "deploymentBucketName": "amplify-amplify1ff54161dd674-staging-82547-deployment",
+          "s3Key": "amplify-builds/portfolioAPI-3839564a53496f517a56-build.zip"
+        }
+      }
+    }
+  }
+}
