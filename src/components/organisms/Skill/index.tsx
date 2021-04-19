@@ -22,3 +22,5 @@ const Skill: React.VFC = React.memo(() => {
 });
 
 export default Skill;
+
+Skill.displayName = 'Skill';

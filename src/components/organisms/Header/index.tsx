@@ -24,3 +24,5 @@ const Header: React.VFC = React.memo(() => {
 });
 
 export default Header;
+
+Header.displayName = 'Header';

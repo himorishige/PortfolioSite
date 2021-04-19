@@ -24,3 +24,5 @@ const Profile: React.VFC = React.memo(() => {
 });
 
 export default Profile;
+
+Profile.displayName = 'Profile';
