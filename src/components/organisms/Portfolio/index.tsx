@@ -33,3 +33,5 @@ const Portfolio: React.VFC<Props> = (props) => {
 };
 
 export default Portfolio;
+
+Portfolio.displayName = 'Portfolio';

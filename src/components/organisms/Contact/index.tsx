@@ -124,3 +124,5 @@ const Contact: React.VFC = React.memo(() => {
 });
 
 export default Contact;
+
+Contact.displayName = 'Contact';
