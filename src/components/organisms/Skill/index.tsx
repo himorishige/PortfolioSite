@@ -10,8 +10,10 @@ const Skill: React.VFC = React.memo(() => {
         <Heading size="large">FULL STACK</Heading>
       </div>
       <div className={styles.typography}>
-        <Typography>
-          MERNスタック（MongoDB・Express・React・Node.js）を用いたWebアプリケーションの構築を得意としています。aws環境または各種サーバーレスアーキテクチャを用いてMERNスタックを構築、運用することができます。（将来的目標）
+        <Typography align="center">
+          MERNスタック（MongoDB・Express・React・Node.js）を用いたWebアプリケーションの構築。
+          <br />
+          aws環境または各種サーバーレスアーキテクチャを用いたフルスタック環境の構築。
         </Typography>
       </div>
       <div className={styles.skillSet}>
